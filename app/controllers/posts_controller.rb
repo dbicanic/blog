@@ -1,6 +1,6 @@
 
 class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :update, :show, :delete]
+  before_action :authenticate_admin!, except: [:index, :show]
 
   # Index action to render all posts
   def index
@@ -41,6 +41,7 @@ class PostsController < ApplicationController
 
   # The show action renders the individual post after retrieving the the id
   def show
+    @post = find_post
   end
 
   # The destroy action removes the post permanently from the database
