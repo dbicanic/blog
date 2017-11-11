@@ -35,9 +35,11 @@ gem 'simple_form', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.3'
 
 gem 'jquery-rails'
-
+# Editor and image help
 gem 'ckeditor', '~> 4.1'
-
+gem 'carrierwave'
+gem 'mini_magick'
+# authsignup gem
 gem 'devise'
 
 # Use Capistrano for deployment
