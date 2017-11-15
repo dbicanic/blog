@@ -25,13 +25,15 @@ class PostsController < ApplicationController
 
   # Edit action retrives the post and renders the edit page
   def edit
+    @post = find_post
   end
 
   # Update action updates the post with the new information
   def update
+    @post = find_post
     if @post.update_attributes(post_params)
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to post_path(@post.id)
     else
       flash[:alert] = "Error updating post!"
       render :edit
