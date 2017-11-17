@@ -1,7 +1,8 @@
 <div class="text-center">
   <% @author = get_author %>
   <h2><%= @author.name %></h2>
-  <p><%= @author.hometown %></p>
-  <p><%= @author.hobbies %></p>
-  <%= @author.introduction %>
+  <%= image_tag "puppy.jpg", alt: "Bio picture", :class => "bioPic"%>
+  <p>Hometown: <%= @author.hometown %></p>
+  <p>Hobbies: <%= @author.hobbies %></p>
+  <p><%= raw(@author.introduction) %></p>
 </div>
