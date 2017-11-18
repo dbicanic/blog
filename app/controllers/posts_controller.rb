@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_admin!, except: [:index, :show, :archive]
 
   # Index action to render all posts
   def index
-    @posts = Post.all
+    @posts = Post.paginate(:page => params[:page], :per_page => 5).order('id DESC')
+  end
+
+  def archive
+    @posts = Post.paginate(:page => params[:page], :per_page => 30).order('id DESC')
   end
 
   # New action for creating post

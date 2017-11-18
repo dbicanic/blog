@@ -1,5 +1,5 @@
 <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-  <% last_five.each do |post| %>
+  <% @posts.each do |post| %>
   <div class="col-xs-12 text-center">
     <div class="text-center">
       <h2><%= post.title %></h2>
@@ -19,4 +19,7 @@
     <hr />
   </div>
   <% end %>
+  <div class="text-center">
+    <%= will_paginate @posts %>
+  </div>
 </div>
