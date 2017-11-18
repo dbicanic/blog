@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root to: "posts#index"
 
   resources :posts
+  get 'archive', to: 'posts#archive', as: :archive_posts
   resources :authors
 end
