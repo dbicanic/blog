@@ -43,6 +43,8 @@ gem 'mini_magick'
 gem 'devise'
 #For page pagination
 gem 'will_paginate', '~> 3.1.0'
+# Social button
+gem 'social-share-button'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
