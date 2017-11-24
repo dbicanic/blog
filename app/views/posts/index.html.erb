@@ -4,7 +4,6 @@
     <div class="text-center">
       <h2><%= post.title %></h2>
       <h6><%= post.created_at.strftime('%b %d, %Y') %></h6>
-      <%= social_share_button_tag(post.title, :url => post_path(post))%>
     </div>
     <div class="text-left">
       <%= raw(post.body) %>
