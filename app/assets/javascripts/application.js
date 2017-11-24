@@ -16,4 +16,5 @@
 //= require rails-ujs
 //= require turbolinks
 //= require ckeditor/init
+//= require social-share-button
 //= require_tree .
