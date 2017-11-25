@@ -45,6 +45,9 @@ gem 'devise'
 gem 'will_paginate', '~> 3.1.0'
 # Social button
 gem 'social-share-button'
+# For storing files and using aws
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
